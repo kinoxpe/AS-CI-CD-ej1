@@ -1,0 +1,15 @@
+name: Primer workflow
+
+on: 
+  pull_request:   #Codigo del ej2 (no lo tengo)
+jobs:
+  hola_mundo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: Instalar pytest
+        run: pip install pytest
+      - name: Probar codigo
+        run: pytest test.py
